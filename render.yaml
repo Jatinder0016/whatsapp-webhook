@@ -12,5 +12,4 @@ services:
     autoDeploy: true
     branch: main
     rootDir: .
-    public: true
     healthCheckPath: /
