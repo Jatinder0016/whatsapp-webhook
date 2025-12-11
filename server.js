@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Webhook is running");
+});
 
 const VERIFY_TOKEN = "my_secret_token";
 
