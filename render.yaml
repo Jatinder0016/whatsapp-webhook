@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: whatsapp-webhook
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    public: true
+    healthCheckPath: /
